@@ -117,16 +117,12 @@
     {% endif %}
   </div>
 
-  <!-- AVAILABLE TAGS -->
-
   <h3>Available Tags</h3>
 
   <div class="subsection-content tag-list">
     {% if tags.count %} {% for tag in tags %}
-
     <form action="{% url 'associate-tag' item.id tag.id %}" method="post">
       {% csrf_token %}
-
       <button
         type="submit"
         class="tag-btn"
@@ -135,11 +131,8 @@
         + {{ tag.name }}
       </button>
     </form>
-
     {% endfor %} {% else %}
-
     <p class="all-tags">{{ item.name }} already has all available tags 🥳</p>
-
     {% endif %}
   </div>
 </section>
