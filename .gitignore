@@ -5,7 +5,6 @@ __pycache__/
 # Virtual Environment
 .env
 .venv
-Pipfile.lock
 
 # Django
 db.sqlite3
