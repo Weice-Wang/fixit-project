@@ -1,0 +1,137 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: white;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 4px 4px 0 black;
+}
+
+/* Table Layout */
+table {
+  width: 100%;
+  border-spacing: 0 24px;
+}
+
+/* Labels */
+th {
+  text-align: left;
+  padding-right: 24px;
+  vertical-align: top;
+  font-size: 2rem;
+  font-weight: 700;
+  color: black;
+  letter-spacing: 0.5px;
+  width: 220px;
+}
+
+/* Table Cell */
+td {
+  width: 100%;
+}
+
+/* Inputs */
+td input,
+td select,
+td textarea {
+  width: 100%;
+  padding: 18px 20px;
+
+  border: 1px solid black;
+  border-radius: 18px;
+
+  background: white;
+  color: black;
+
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-family: inherit;
+
+  box-shadow: 2px 2px 0 black;
+
+  transition: all 0.15s ease;
+}
+
+/* Focus State */
+td input:focus,
+td select:focus,
+td textarea:focus {
+  outline: none;
+
+  transform: translate(-2px, -2px);
+
+  box-shadow: 6px 6px 0 #3b5bff;
+}
+
+/* Textarea */
+td textarea {
+  min-height: 180px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+/* Placeholder Text */
+input::placeholder,
+textarea::placeholder {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Help Text */
+.helptext {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Button */
+.btn {
+  align-self: flex-end;
+
+  margin-top: 2rem;
+
+  padding: 14px 28px;
+
+  border: 2px solid black;
+  border-radius: 16px;
+
+  background: #3b5bff;
+  color: white;
+
+  font-size: 1.1rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow: 4px 4px 0 black;
+
+  transition: all 0.15s ease;
+}
+
+/* Button Hover */
+.btn:hover {
+  transform: translate(-2px, -2px);
+
+  box-shadow: 6px 6px 0 black;
+}
+
+/* Button Active */
+.btn:active {
+  transform: translate(2px, 2px);
+
+  box-shadow: 2px 2px 0 black;
+}
+
+input[type="color"] {
+  width: 80px;
+  height: 50px;
+  padding: 0;
+  border: 3px solid black;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 4px 4px 0 black;
+  cursor: pointer;
+}

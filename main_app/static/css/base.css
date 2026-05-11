@@ -1,0 +1,254 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+:root {
+  --nav-bg: rgb(255, 255, 255);
+  --nav-bg-ff: rgb(0, 0, 0);
+
+  --borders: rgba(0, 0, 0) solid 2px;
+
+  --text-color: rgb(0, 0, 0);
+  --content-a-text-color: rgb(0, 0, 0);
+
+  --link-hover-color: rgb(0, 47, 255);
+
+  --button-bg: rgb(245, 245, 245);
+  --button-bg-hover: rgb(226, 226, 226);
+
+  --submit: rgb(97, 154, 80);
+  --warn: rgb(255, 102, 0);
+  --danger: rgb(220, 20, 30);
+  --secondary: rgb(57, 57, 57);
+
+  --card-box-shadow: 5px 5px 6px -1px #aaa;
+
+  --font-xtreme: clamp(3.8rem, 5vw, 5rem);
+  --font-xxl: clamp(3rem, 4vw, 4rem);
+  --font-xl: clamp(2.2rem, 3vw, 3rem);
+  --font-l: 1.8rem;
+  --font-reg: 1.6rem;
+
+  --card-border-radius: 6px;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+  background-color: rgb(237, 235, 233);
+}
+
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1rem 2rem;
+
+  background: var(--nav-bg);
+  border-bottom: var(--borders);
+}
+
+.header-logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo-container img {
+  width: 80px;
+  height: auto;
+  display: block;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  flex-wrap: wrap;
+}
+
+nav li {
+  display: flex;
+  align-items: center;
+}
+
+nav a,
+#logout-form button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem 1.6rem;
+
+  text-decoration: none;
+  color: var(--text-color);
+
+  font-size: var(--font-reg);
+  font-weight: 700;
+
+  background: white;
+
+  border: 1px solid black;
+  border-radius: 35px;
+
+  box-shadow: 3px 3px 0 black;
+
+  cursor: pointer;
+
+  transition: all 0.15s ease;
+}
+
+nav a:hover,
+#logout-form button:hover {
+  background: #3b5bff;
+  color: white;
+
+  transform: translate(-2px, -2px);
+
+  box-shadow: 5px 5px 0 black;
+}
+
+nav a:active,
+#logout-form button:active {
+  transform: translate(1px, 1px);
+
+  box-shadow: 2px 2px 0 black;
+}
+
+main {
+  width: min(100% - 2rem, 1300px);
+
+  margin: 0 auto;
+  padding: 2rem 0;
+
+  flex: 1;
+}
+
+h1 {
+  font-size: var(--font-xxl);
+}
+
+h2 {
+  font-size: var(--font-xl);
+}
+
+.page-content {
+  font-size: var(--font-reg);
+  line-height: 1.6;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  margin-bottom: 2rem;
+}
+
+.page-header img {
+  height: clamp(40px, 5vw, 60px);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.8rem 1.6rem;
+
+  border-radius: var(--card-border-radius);
+  border: 2px solid;
+
+  background-color: var(--button-bg);
+
+  font-size: var(--font-l);
+  font-weight: 600;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--button-bg-hover);
+  transform: translateY(-1px);
+}
+
+.submit {
+  color: var(--submit);
+  border-color: var(--submit);
+}
+
+.secondary {
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.warn {
+  color: var(--warn);
+  border-color: var(--warn);
+}
+
+.danger {
+  color: var(--danger);
+  border-color: var(--danger);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.2rem;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

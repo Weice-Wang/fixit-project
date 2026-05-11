@@ -1,0 +1,353 @@
+.item-container {
+  padding: 35px 30px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 30px;
+}
+
+.item-img {
+  width: 275px;
+  background: white;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 4px 4px 0 black;
+  font-size: 4rem;
+  transition: 0.15s ease;
+}
+
+.item-img:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 7px 7px 0 #3b5bff;
+}
+
+.item-img img {
+  width: 100%;
+}
+
+.usr-img {
+  width: 100%;
+  border-radius: 18px;
+}
+
+/* RIGHT DETAILS CARD */
+.item-details {
+  width: 98%;
+
+  background: white;
+  border: 2px solid black;
+  border-radius: 20px;
+
+  padding: 2rem;
+
+  box-shadow: 4px 4px 0 black;
+}
+
+/* ACTION BUTTONS */
+.item-actions {
+  margin-top: 25px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* SECTION CONTAINER */
+.maintaining-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  align-items: center;
+  gap: 24px;
+}
+
+/* SUBSECTION CARD */
+.maintaining-container > section {
+  width: 80%;
+  min-width: 360px;
+  background: white;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 4px 4px 0 black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.subsection-content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
+
+.subsection-content p {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+}
+
+.subsection-content label {
+  width: 140px;
+  font-weight: 700;
+  margin-right: 30px;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+.subsection-content input,
+.subsection-content select,
+.subsection-content textarea {
+  padding: 1.2rem 1.6rem;
+  border: 1px solid black;
+  border-radius: 24px;
+  font-size: 1.5rem;
+  transition: all 0.15s ease;
+  outline: none;
+}
+
+/* Persona blue focus */
+
+.subsection-content input:focus,
+.subsection-content select:focus,
+.subsection-content textarea:focus {
+  transform: translate(-2px, -2px);
+  box-shadow: 2px 2px 0 #3b5bff;
+  border-color: #3b5bff;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.subsection-content textarea {
+  width: 500px;
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.subsection-content .submit {
+  width: fit-content;
+
+  margin-top: 1rem;
+}
+/* HEADINGS */
+.item-details h1 {
+  font-size: 4rem;
+  margin: 0 0 10px;
+  line-height: 1.1;
+}
+
+.item-details h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.item-details h3 {
+  margin: 24px 0 12px;
+  font-size: 1.4rem;
+}
+
+.item-details p {
+  font-size: 1.5rem;
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+/* MAINTAINING / LABLE SECTION HEADINGS */
+.maintainings h2,
+.tags h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.maintainings h3,
+.tags h3 {
+  font-size: 1.5rem;
+  margin: 25px 0;
+}
+
+/* ICONS */
+.subsection-title img {
+  height: 42px;
+  margin-left: 8px;
+}
+
+.subsection-title img:first-of-type {
+  margin-left: 16px;
+}
+
+/* TABLE STYLE */
+.maintainings table {
+  width: 100%;
+  text-align: left;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+}
+
+/* TABLE HEADER */
+.maintainings th {
+  font-size: 1.5rem;
+  padding: 10px;
+  color: black;
+  border-bottom: 2px solid #3b5bff;
+}
+
+/* TABLE ROW */
+.maintainings td {
+  padding: 14px;
+  font-size: 1.25rem;
+  background: white;
+}
+
+/* Rounded Table Cells */
+.maintainings td:first-child {
+  border-radius: 14px 0 0 14px;
+}
+
+.maintainings td:last-child {
+  border-radius: 0 14px 14px 0;
+}
+
+/* INPUTS */
+.subsection-content input,
+.subsection-content select {
+  margin-left: 5px;
+  padding: 12px 16px;
+  border: 1px solid black;
+  border-radius: 14px;
+  font-size: 1rem;
+}
+
+/* Tag CARDS */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tags .subsection-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3.5rem;
+}
+
+.tag-btn,
+.tag-chip {
+  padding: 1rem 1.6rem;
+  border: 1px solid black;
+  border-radius: 999px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  box-shadow: 1px 1px 0 black;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-decoration: none;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 12px 20px;
+  width: 100px;
+  border: 2px solid black;
+  border-radius: 14px;
+
+  background: #3b5bff;
+  color: white;
+
+  font-weight: bold;
+  text-decoration: none;
+
+  box-shadow: 4px 4px 0 black;
+
+  transition: 0.15s ease;
+}
+
+.btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 black;
+}
+
+/* STATUS TEXT */
+.unfed,
+.fed,
+.no-tags,
+.all-tags {
+  margin: 0;
+  font-weight: bold;
+}
+
+.unfed,
+.no-tags {
+  color: #d11a2a;
+}
+
+.fed,
+.all-tags {
+  color: #2c7a4b;
+}
+
+/* COLOR BLOCK */
+.color-block {
+  opacity: 0.9;
+  height: 25px;
+  width: 25px;
+  margin-right: 10px;
+  border-radius: 6px;
+  border: 2px solid black;
+}
+
+/* FILE INPUT */
+#file-input {
+  overflow: hidden;
+  position: absolute;
+  width: 0.1px;
+  height: 0.1px;
+}
+
+#file-name {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+/* RESPONSIVE */
+@media only screen and (min-width: 768px) {
+  .item-container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: start;
+  }
+
+  .item-img {
+    width: 30%;
+    max-width: 250px;
+    margin-right: 25px;
+  }
+
+  .maintaining-container {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .maintaining-container > section {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .maintaining-container {
+    padding: 0 30px;
+  }
+}

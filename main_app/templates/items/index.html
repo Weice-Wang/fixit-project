@@ -1,0 +1,58 @@
+{% extends 'base.html' %} {% load static %} {% block head %}
+<link rel="stylesheet" href="{% static 'css/items/item-index.css' %}" />
+{% endblock %} {% block content %}
+
+<section class="page-header">
+  <h1>Item List</h1>
+</section>
+
+<section class="card-container">
+  {% for item in items %}
+  <div class="card">
+    <a href="{% url 'item-detail' item.id %}">
+      <div class="card-content">
+        <div class="card-img-container">
+          {% if item.category == 'mobile' %}
+          <img
+            src="{% static 'images/mobile.png' %}"
+            alt="A mobile device image"
+          />
+
+          {% elif item.category == 'electronics' %}
+          <img
+            src="{% static 'images/electronics.png' %}"
+            alt="An electronics image"
+          />
+
+          {% elif item.category == 'gaming' %}
+          <img src="{% static 'images/gaming.png' %}" alt="A gaming image" />
+
+          {% elif item.category == 'tools_hardware' %}
+          <img
+            src="{% static 'images/tool.png' %}"
+            alt="A tools and hardware image"
+          />
+
+          {% elif item.category == 'home_appliances' %}
+          <img
+            src="{% static 'images/home.png' %}"
+            alt="A home appliance image"
+          />
+
+          {% else %}
+          <img src="{% static 'images/other.png' %}" alt="An item image" />
+          {% endif %}
+        </div>
+        <h2 class="card-title">{{ item.name }}</h2>
+        <p>🏷️ {{ item.brand }}</p>
+        <p>💸 ${{ item.price }}</p>
+        <p>🛡️ {{ item.warranty }}</p>
+        <p>📅 {{ item.purchase_date }}</p>
+        <p>📝 {{ item.description }}</p>
+      </div>
+    </a>
+  </div>
+  {% endfor %}
+</section>
+
+{% endblock %}
