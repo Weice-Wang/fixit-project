@@ -1,0 +1,87 @@
+.card-container {
+  padding: 3rem 4rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card {
+  width: 240px;
+  height: 120px;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  background: white;
+  border: 3px solid black;
+  border-radius: 120px;
+  box-shadow: 8px 8px 0 black;
+  transition: all 0.15s ease;
+}
+
+.card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 10px 10px 0 #3b5bff;
+}
+
+.card-bg {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  opacity: 0.28;
+  filter: contrast(1.1);
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+  padding: 3.6rem;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+  text-align: right;
+}
+
+.card > a {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: block;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.card h2 {
+  margin: 1.2rem auto 0;
+  width: fit-content;
+  padding: 0.6rem 1.4rem;
+  display: flex;
+  color: black;
+  font-size: 2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: 0.15s ease;
+}
+
+.card p {
+  margin: 0;
+  padding: 0.3rem 0.7rem;
+  background: rgba(255, 255, 255, 0.85);
+  font-size: var(--font-reg);
+  font-weight: 600;
+}
+
+.page-header > img {
+  margin-left: 10px;
+}
+
+.page-header > img:first-of-type {
+  margin-left: 15px;
+}
