@@ -16,8 +16,6 @@ FixIt provides a simple way to organize and record all of this information in on
 
 ---
 
-## Screenshot
-
 ![Homepage Screenshot](main_app/static/images/front_page.png)
 
 ---
